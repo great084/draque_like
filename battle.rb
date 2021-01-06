@@ -24,7 +24,7 @@ class Battle
       @monster.attack(@brave)
     end
     print_status
-    judge
+    winner_judge
   end
   
   def print_status
@@ -39,7 +39,7 @@ class Battle
     @brave.hp > 0 && @monster.hp > 0
   end
 
-  def judge
+  def winner_judge
     if @brave.hp > 0 
       puts "#{@monster.name}をやっつけた！(^0^)"
     else
